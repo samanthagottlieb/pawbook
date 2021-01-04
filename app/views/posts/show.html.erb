@@ -3,6 +3,9 @@
 <p>
   <strong>Content:</strong>
   <%= @post.content %>
+  <%= @post.picture %>
+  <%= image_tag(@post.picture_url, width: 600) if @post.picture.present? %>
+
 </p>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
